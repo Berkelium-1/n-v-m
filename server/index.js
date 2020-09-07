@@ -2,8 +2,8 @@ const express = require('express');
 
 const app = express();
 
-let routes = require('./routes/admin/index');
-let db = require('./plugins/db');
+let routes = require('./routes/admin/index.js');
+let db = require('./plugins/db.js');
 
 db(app);
 routes(app);

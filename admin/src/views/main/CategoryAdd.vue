@@ -22,8 +22,14 @@ export default {
     };
   },
   methods: {
-    save() {
-      this.$request();
+    async save() {
+      const res = await this.$request.post('categories', this.model);
+      this.$router.push({ name: 'CategoryList' }); // 跳转到分类列表
+      this.$message({
+        // 提示
+        type: 'success',
+        message: '保存成功'
+      });
     }
   }
 };
