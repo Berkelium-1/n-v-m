@@ -7,8 +7,17 @@ module.exports = app => {
 
     router.post('/categories', async (req, res) => {
         const model = await Category.create(req.body);
-        res.send(model);
+        console.log(req.body);
+        res.send({
+            msg: '保存成功',
+            model
+        });
     });
 
-    app.use('/admin/api', router);
+    router.get('/categories', async (req, res) => {
+        const listData = await Category.find();
+        res.send(listData);
+    });
+
+    app.use('/admin/api', router); // 挂载路由
 }

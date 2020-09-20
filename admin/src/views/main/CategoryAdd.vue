@@ -22,8 +22,20 @@ export default {
     };
   },
   methods: {
-    save() {
-      this.$request();
+    async save() {
+      const res = await this.$request({
+        url: 'categories',
+        method: 'post',
+        data: this.model
+      });
+
+      this.$message({
+        // 消息提示
+        type: 'success',
+        message: res.data.msg
+      });
+
+      // console.log(res);
     }
   }
 };

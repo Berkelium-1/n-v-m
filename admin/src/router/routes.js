@@ -1,5 +1,6 @@
 import Main from '@/views/Main.vue'
 import CategoryAdd from '@/views/main/CategoryAdd.vue'
+import CategoryList from '@/views/main/CategoryList.vue'
 
 
 const routes = [
@@ -19,6 +20,12 @@ const routes = [
                 path: 'CategoryAdd',
                 name: 'CategoryAdd',
                 component: CategoryAdd
+            },
+            // 分类列表
+            {
+                path: 'CategoryList',
+                name: 'CategoryList',
+                component: CategoryList
             }
         ]
     }

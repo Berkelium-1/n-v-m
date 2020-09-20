@@ -10,7 +10,7 @@
           <el-menu-item-group>
             <template slot="title">分类</template>
             <el-menu-item index="/Main/CategoryAdd">新建分类</el-menu-item>
-            <el-menu-item index="/Main">分类列表</el-menu-item>
+            <el-menu-item index="/Main/CategoryList">分类列表</el-menu-item>
           </el-menu-item-group>
         </el-submenu>
       </el-menu>
@@ -41,14 +41,14 @@
 export default {
   data() {
     const item = {
-      date: "2016-05-02",
-      name: "王小虎",
-      address: "上海市普陀区金沙江路 1518 弄",
+      date: '2016-05-02',
+      name: '王小虎',
+      address: '上海市普陀区金沙江路 1518 弄'
     };
     return {
-      tableData: Array(20).fill(item),
+      tableData: Array(20).fill(item)
     };
-  },
+  }
 };
 </script>
 
