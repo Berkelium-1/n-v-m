@@ -15,8 +15,9 @@ const routes = [
         name: 'Main',
         component: Main,
         children: [
-            // 分类编辑
+            // 分类新建 || 分类编辑
             { path: 'CategoryAdd', name: 'CategoryAdd', component: CategoryAdd },
+            { path: 'CategoryAdd/edit/:id', name: 'CategoryEdit', component: CategoryAdd, props: true }, // props 用于动态路由传参
             // 分类列表
             { path: 'CategoryList', name: 'CategoryList', component: CategoryList }
         ]
